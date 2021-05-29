@@ -1,0 +1,115 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #1C1C28;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    background-color: #1C1C28;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #C2C3C5;
+    text-align: center;
+}
+
+/*Container for entire prompt application*/
+.container {
+    background-color: #28293D;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px 2px black;
+    width: 600px;
+    max-width: 80%;
+}
+
+.question {
+    margin: 40px;
+    background-color: #1C1C28;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/*Answer Button Styles - hover element and colors*/
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*Allow individual colors and hovers for each button element*/
+.btn:nth-child(1) {
+    background-color: #FCCC75;
+}
+.btn:nth-child(2) {
+    background-color: #57EBA1;
+}
+.btn:nth-child(3) {
+    background-color: #FF8080;
+}
+.btn:nth-child(4) {
+    background-color: #DDA5E9;
+}
+
+.btn:hover {
+    background-color: #6698FF;
+}
+
+/*Prompt Button Styles*/
+.start-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start, #next {
+    font-size: 50px;
+    padding: 30px 50px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    background-color: #6698FF;
+    color: white;
+}
+
+#start:hover, #next:hover {
+    transition: .5s ease;
+    background-color: #FF8080;
+}
+
+/*Time Container Style*/
+.time-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*Hide/show class attribute to show buttons*/
+.hide {
+    display: none;
+}
+
