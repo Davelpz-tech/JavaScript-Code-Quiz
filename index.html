@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="./assets/script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <title>JavaScript Code Quiz</title>
 </head>
 <body>
+
+<!-- Area that displays each Question -->
     <div class="container">
         <div id="question-container" class="hide">
             <h1>JavaScript Quiz</h1>
             <div class="question">
-                <h3>Placeholder Question</h3>
+                <h3 id="question-location"></h3>
+
+            <!-- Answer Buttons -->
             </div>
             <div id="answer-btn-container" class="answer-grid">
                 <button class="btn">Answers</button>
@@ -22,14 +25,45 @@
                 <button class="btn">Answers</button>
                 <button class="btn">Answers</button>
             </div>
+
+<!-- Prompts that show after selecting answer -->
+            <div>
+                <h3 id="correct-answer" class="correct-answer hide">Correct! Hit the next Button to Continue</h3>
+            </div>
+            <div id="wrong-answer" class="wrong-answer hide">
+                <h3>Wrong! Try again...</h3>
+            </div>
+
+<!-- Countdown Timer -->
             <div class="time-container">
-                <p class="time">Time Remaining: <p id="seconds-remaining"></p></p>
+                <div id="timer">
+                    <p class="time">Time Remaining: <p id="seconds-remaining" class="seconds-remaining"></p></p>
+                </div>
             </div>
         </div>
+
+<!-- Control Buttons for Navigation -->
         <div class="start-next">
             <button id="start" class="start-btn">Start</button>
             <button id="next" class="next-btn hide">Next</button>
+            <button id="submit" class="temporary">Highscore</button>
+        </div>
+
+<!-- Highscores Menu -->
+        <div id = "high-score" class="high-score hide">
+            <button id="back-btn" class="back-btn">Back</button>
+            <h3>High Scores</h3>
+            <p>Welcome to the Hall of Fame</p>
+            <input id="name-input" class="name-input" type="text" placeholder="Enter your Name to Submit your Score!" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Name to Submit your Score!'">
+            <form class="scores-container">
+                <ul id="scores" class="scores">
+                </ul>
+            <div class="submit-container">
+                <button id="submit-score" class="submit-score" type="submit">Submit Score</button>
+            </div>
+            </form>
         </div>
     </div>
+
 </body>
 </html>
